@@ -1,0 +1,177 @@
+@import "foundation/common/ratios";
+@import "settings";
+@import "compass/css3";
+
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Layout
+:: Footer
+
+
+/* -----------------------------------------
+   Layout, Fonts
+----------------------------------------- */
+
+
+html { font-size: 87.5%;  }
+
+@media only screen and (max-width: 480px) {
+	html { font-size: 75%;  }}   
+	
+	
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {font-size:1em;}
+body {background:url(../img/tex/cream.jpg) repeat; font-size:1em; line-height:1.6;}
+
+p {font-size:1em;}
+
+h1 {font-size:2.57142857em; } /*36*/
+h2 {font-size:2.14285714em; } /*30*/
+h3 {font-size:1.71428571em; } /*24*/
+h4 {font-size:1.5em; } /*21*/
+h5 {font-size:1.28571429em; } /*18*/
+h6 {font-size:1em; }
+
+
+
+
+/* -----------------------------------------
+  Header
+----------------------------------------- */
+
+.top-bar { width:100%; background:black; color: $grey; height:80px; margin-bottom: 0; }
+
+.top-bar .row > .columns { padding: 0 20px; }
+
+.top-bar h4 { color:$secondaryColor; margin-top: 1em; }
+.top-bar h4 span { 
+	color: $grey; display: block; line-height:1.69230769;
+	font-size: 0.61904762em; font-family: $sans;  }
+	
+	
+
+
+.top-bar ul > li a:not(.button) { padding: 0; height: auto; }
+
+.nav-bar { margin-bottom: 0;}
+
+#mainNav { margin-top: -1em; }
+#mainNav li { list-style-type: none; display: inline-block;  }
+
+ 
+
+.nav-about, .nav-portfolio { float: left; margin-right: 4em;  }
+.top-bar ul > li.nav-journal, 
+.top-bar ul > li.nav-contact { float: right; text-align:right; margin-left: 4em; }
+
+
+.top-bar ul > li.toggle-topbar a { font-weight:normal; font-size:0.92857143em; font-variant:small-caps; }
+
+
+
+@media only screen and (max-width: 767px) { 
+	.nav-about, .nav-portfolio, .nav-journal, .nav-contact { display: none !important; }
+	.top-bar section { margin-top: 100px; }
+	
+	.top-bar ul li.toggle-topbar {background:url(../img/header/ribbon.png) no-repeat 0 -28px; width:50px; right:15px; height:50px; }
+	.top-bar ul li.toggle-topbar:hover {background:url(../img/header/ribbon.png) no-repeat 0 -28px;  }
+	
+	.top-bar ul li.toggle-topbar a {width:50px; right:0px; border:none; text-align:center; top:auto; bottom:-10px; }
+	
+	.top-bar.expanded ul li.toggle-topbar {background:url(../img/header/ribbon.png) no-repeat; background-position:0 -13px; height:65px; }
+	.top-bar.expanded ul li.toggle-topbar a {width:50px; top: 0; right:0px; border:none; text-align:center; top:auto; bottom:74px;}
+	
+	}
+
+
+@media only screen and (max-width: 480px) { 
+	.top-bar .row > .columns { padding: 0 10px; }
+	.top-bar ul li.toggle-topbar { right:5px; } }
+	
+
+@media only screen and (min-width: 768px) { 
+	.top-bar section {display: none; }
+	.top-bar ul > li.toggle-topbar a {display: none;}}
+	
+	
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+  
+  .top-bar ul li.toggle-topbar { background:url(../img/header/ribbon@2x.png) no-repeat 0 -28px; background-size:100%; }
+  .top-bar ul li.toggle-topbar:hover {background:url(../img/header/ribbon@2x.png) no-repeat 0 -28px; background-size:100%;   }
+  
+  .top-bar.expanded ul li.toggle-topbar {background:url(../img/header/ribbon@2x.png) no-repeat; background-position:0 -13px;  background-size:100%; }
+  
+}	
+	
+	
+	
+	
+	
+
+
+/* -----------------------------------------
+  Footer
+----------------------------------------- */
+
+footer { width:100%; background:black; color: $grey; height:100px; font-style:italic; }
+footer p { font-size: 0.92857143em; }
+
+footer .row > .columns { padding: 0 20px; }
+
+
+ @media only screen and (max-width: 767px) {
+ 	footer p { text-align: center; } }
+
+
+ @media only screen and (max-width: 480px) { 
+ 	footer .row > .columns { padding: 0 10px; }}
+
+
+
+/* -----------------------------------------
+  Pages
+----------------------------------------- */
+
+
+.page { 
+	background:url(../img/tex/paper.jpg) repeat; position:relative; float:left;  margin-bottom:30px;  width: 100%;
+	@include box-shadow(0px 0px 3px 1px rgba(0, 1, 1, 0.15));}
+
+
+.page-inner { 
+   margin: 20px; position:relative; z-index:2;
+   border: 1px solid $pagestroke;
+   padding:16px;}
+   
+  
+.page-inner:before {
+	content: "";
+	position: absolute;
+	top: -6px;
+	left: -6px;
+	border: solid 2px $pagestroke;
+	bottom:-6px;
+	right:-6px;
+	z-index: -1; }
+   
+   
+ @media only screen and (max-width: 480px) {
+ 	.page-inner { margin: 16px; padding: 12px; } } 
+
+
+
+
+/* -----------------------------------------
+  Forms
+----------------------------------------- */
+
+
+.contactform h3 {
+ 	font-family: 'bistro-script-web'; font-size: 4em; text-align: center; } 	
+ 	
+.contactform h3 span { font-family: $bodyFontFamily ; display: block; font-size: 0.28571429em; text-transform: uppercase;  } 	
+ 	  
