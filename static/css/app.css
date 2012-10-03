@@ -4979,65 +4979,67 @@ div.progress.round .meter {
 /* -----------------------------------------
    Layout, Fonts
 ----------------------------------------- */
-/* line 18, ../sass/_portfolio.scss */
+/* line 24, ../sass/_portfolio.scss */
 html {
   font-size: 87.5%;
 }
 
 @media only screen and (max-width: 480px) {
-  /* line 21, ../sass/_portfolio.scss */
+  /* line 27, ../sass/_portfolio.scss */
   html {
     font-size: 75%;
   }
 }
-/* line 24, ../sass/_portfolio.scss */
+/* line 30, ../sass/_portfolio.scss */
 body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, p, blockquote, th, td {
   font-size: 1em;
 }
 
-/* line 25, ../sass/_portfolio.scss */
+/* line 31, ../sass/_portfolio.scss */
 body {
   background: url(../img/tex/cream.jpg) repeat;
   font-size: 1em;
   line-height: 1.6;
 }
 
-/* line 27, ../sass/_portfolio.scss */
+/* line 33, ../sass/_portfolio.scss */
 p {
   font-size: 1em;
 }
 
-/* line 29, ../sass/_portfolio.scss */
+/* line 35, ../sass/_portfolio.scss */
 h1 {
   font-size: 2.57142857em;
+  text-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 /*36*/
-/* line 30, ../sass/_portfolio.scss */
+/* line 36, ../sass/_portfolio.scss */
 h2 {
   font-size: 2.14285714em;
 }
 
 /*30*/
-/* line 31, ../sass/_portfolio.scss */
+/* line 37, ../sass/_portfolio.scss */
 h3 {
   font-size: 1.71428571em;
 }
 
 /*24*/
-/* line 32, ../sass/_portfolio.scss */
+/* line 38, ../sass/_portfolio.scss */
 h4 {
   font-size: 1.5em;
+  font-weight: 500;
 }
 
 /*21*/
-/* line 33, ../sass/_portfolio.scss */
+/* line 39, ../sass/_portfolio.scss */
 h5 {
   font-size: 1.28571429em;
 }
 
 /*18*/
-/* line 34, ../sass/_portfolio.scss */
+/* line 40, ../sass/_portfolio.scss */
 h6 {
   font-size: 1em;
 }
@@ -5045,27 +5047,23 @@ h6 {
 /* -----------------------------------------
   Header
 ----------------------------------------- */
-/* line 43, ../sass/_portfolio.scss */
+/* line 49, ../sass/_portfolio.scss */
 .top-bar {
   width: 100%;
-  background: black;
+  background: #262626 url(../img/header/header.jpg) bottom repeat-x;
   color: #b8b6b3;
   height: 80px;
   margin-bottom: 0;
 }
 
-/* line 45, ../sass/_portfolio.scss */
-.top-bar .row > .columns {
-  padding: 0 20px;
-}
-
-/* line 47, ../sass/_portfolio.scss */
+/* line 53, ../sass/_portfolio.scss */
 .top-bar h4 {
   color: #f3e9dd;
   margin-top: 1em;
+  font-weight: 300;
 }
 
-/* line 48, ../sass/_portfolio.scss */
+/* line 54, ../sass/_portfolio.scss */
 .top-bar h4 span {
   color: #b8b6b3;
   display: block;
@@ -5074,35 +5072,35 @@ h6 {
   font-family: "pt-sans", sans-serif;
 }
 
-/* line 55, ../sass/_portfolio.scss */
+/* line 58, ../sass/_portfolio.scss */
 .top-bar ul > li a:not(.button) {
   padding: 0;
   height: auto;
 }
 
-/* line 57, ../sass/_portfolio.scss */
+/* line 60, ../sass/_portfolio.scss */
 .nav-bar {
   margin-bottom: 0;
 }
 
-/* line 59, ../sass/_portfolio.scss */
+/* line 62, ../sass/_portfolio.scss */
 #mainNav {
   margin-top: -1em;
 }
 
-/* line 60, ../sass/_portfolio.scss */
+/* line 63, ../sass/_portfolio.scss */
 #mainNav li {
   list-style-type: none;
   display: inline-block;
 }
 
-/* line 64, ../sass/_portfolio.scss */
+/* line 67, ../sass/_portfolio.scss */
 .nav-about, .nav-portfolio {
   float: left;
   margin-right: 4em;
 }
 
-/* line 66, ../sass/_portfolio.scss */
+/* line 69, ../sass/_portfolio.scss */
 .top-bar ul > li.nav-journal,
 .top-bar ul > li.nav-contact {
   float: right;
@@ -5110,25 +5108,70 @@ h6 {
   margin-left: 4em;
 }
 
-/* line 69, ../sass/_portfolio.scss */
+/* line 72, ../sass/_portfolio.scss */
 .top-bar ul > li.toggle-topbar a {
   font-weight: normal;
   font-size: 0.92857143em;
   font-variant: small-caps;
 }
 
+/* line 75, ../sass/_portfolio.scss */
+.main-logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 210px;
+  height: 105px;
+  margin-left: -105px;
+  background: url(../img/header/logo.png) no-repeat;
+  z-index: 3;
+}
+
+@media only screen and (max-width: 860px) {
+  /* line 80, ../sass/_portfolio.scss */
+  .main-logo {
+    width: 200px;
+    height: 100px;
+    margin-left: -100px;
+    background-size: cover;
+  }
+
+  /* line 81, ../sass/_portfolio.scss */
+  .nav-about, .nav-portfolio {
+    margin-right: 3em;
+  }
+
+  /* line 83, ../sass/_portfolio.scss */
+  .top-bar ul > li.nav-journal,
+  .top-bar ul > li.nav-contact {
+    margin-left: 3em;
+  }
+}
 @media only screen and (max-width: 767px) {
-  /* line 74, ../sass/_portfolio.scss */
+  /* line 87, ../sass/_portfolio.scss */
   .nav-about, .nav-portfolio, .nav-journal, .nav-contact {
     display: none !important;
   }
 
-  /* line 75, ../sass/_portfolio.scss */
-  .top-bar section {
-    margin-top: 100px;
+  /* line 89, ../sass/_portfolio.scss */
+  .main-logo {
+    width: 150px;
+    height: 75px;
+    margin-left: -75px;
+    background-size: cover;
   }
 
-  /* line 77, ../sass/_portfolio.scss */
+  /* line 91, ../sass/_portfolio.scss */
+  .top-bar {
+    height: 62px;
+  }
+
+  /* line 93, ../sass/_portfolio.scss */
+  .top-bar section {
+    margin-top: 82px;
+  }
+
+  /* line 95, ../sass/_portfolio.scss */
   .top-bar ul li.toggle-topbar {
     background: url(../img/header/ribbon.png) no-repeat 0 -28px;
     width: 50px;
@@ -5136,12 +5179,12 @@ h6 {
     height: 50px;
   }
 
-  /* line 78, ../sass/_portfolio.scss */
+  /* line 96, ../sass/_portfolio.scss */
   .top-bar ul li.toggle-topbar:hover {
     background: url(../img/header/ribbon.png) no-repeat 0 -28px;
   }
 
-  /* line 80, ../sass/_portfolio.scss */
+  /* line 98, ../sass/_portfolio.scss */
   .top-bar ul li.toggle-topbar a {
     width: 50px;
     right: 0px;
@@ -5151,14 +5194,14 @@ h6 {
     bottom: -10px;
   }
 
-  /* line 82, ../sass/_portfolio.scss */
+  /* line 100, ../sass/_portfolio.scss */
   .top-bar.expanded ul li.toggle-topbar {
     background: url(../img/header/ribbon.png) no-repeat;
     background-position: 0 -13px;
     height: 65px;
   }
 
-  /* line 83, ../sass/_portfolio.scss */
+  /* line 101, ../sass/_portfolio.scss */
   .top-bar.expanded ul li.toggle-topbar a {
     width: 50px;
     top: 0;
@@ -5168,43 +5211,61 @@ h6 {
     top: auto;
     bottom: 74px;
   }
+
+  /* line 104, ../sass/_portfolio.scss */
+  .top-bar ul.left h4 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+  /* line 106, ../sass/_portfolio.scss */
+  .top-bar section > ul li a:not(.button) {
+    padding-left: 0px !important;
+  }
 }
 @media only screen and (max-width: 480px) {
-  /* line 89, ../sass/_portfolio.scss */
+  /* line 111, ../sass/_portfolio.scss */
   .top-bar .row > .columns {
     padding: 0 10px;
   }
 
-  /* line 90, ../sass/_portfolio.scss */
+  /* line 112, ../sass/_portfolio.scss */
   .top-bar ul li.toggle-topbar {
     right: 5px;
   }
 }
 @media only screen and (min-width: 768px) {
-  /* line 94, ../sass/_portfolio.scss */
+  /* line 116, ../sass/_portfolio.scss */
   .top-bar section {
     display: none;
   }
 
-  /* line 95, ../sass/_portfolio.scss */
+  /* line 117, ../sass/_portfolio.scss */
   .top-bar ul > li.toggle-topbar a {
     display: none;
   }
 }
 @media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
-  /* line 103, ../sass/_portfolio.scss */
+  /* line 125, ../sass/_portfolio.scss */
+  .top-bar {
+    background: #262626 url(../img/header/header@2x.jpg) bottom repeat-x;
+    background-size: 300px 400px;
+  }
+
+  /* line 127, ../sass/_portfolio.scss */
   .top-bar ul li.toggle-topbar {
     background: url(../img/header/ribbon@2x.png) no-repeat 0 -28px;
     background-size: 100%;
   }
 
-  /* line 104, ../sass/_portfolio.scss */
+  /* line 128, ../sass/_portfolio.scss */
   .top-bar ul li.toggle-topbar:hover {
     background: url(../img/header/ribbon@2x.png) no-repeat 0 -28px;
     background-size: 100%;
   }
 
-  /* line 106, ../sass/_portfolio.scss */
+  /* line 130, ../sass/_portfolio.scss */
   .top-bar.expanded ul li.toggle-topbar {
     background: url(../img/header/ribbon@2x.png) no-repeat;
     background-position: 0 -13px;
@@ -5212,43 +5273,90 @@ h6 {
   }
 }
 /* -----------------------------------------
+  Banner
+----------------------------------------- */
+/* line 139, ../sass/_portfolio.scss */
+.banner {
+  background: #2c2c2c url(../img/banner/banner.jpg) repeat-x bottom;
+  width: 100%;
+  height: 254px;
+}
+
+/* line 141, ../sass/_portfolio.scss */
+.mobile {
+  display: none;
+}
+
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+  /* line 149, ../sass/_portfolio.scss */
+  .banner {
+    background: #2c2c2c url(../img/banner/banner@2x.jpg) repeat-x bottom;
+    width: 100%;
+    height: 254px;
+    background-size: 300px 400px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  /* line 155, ../sass/_portfolio.scss */
+  .banner {
+    height: 62px;
+    background: #2c2c2c url(../img/banner/banner-small.jpg) repeat-x bottom;
+  }
+
+  /* line 156, ../sass/_portfolio.scss */
+  .mobile {
+    display: block;
+    color: #f3e9dd;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 480px) and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (max-width: 480px) and (-moz-min-device-pixel-ratio: 1.5), only screen and (max-width: 480px) and (-o-min-device-pixel-ratio: 3 / 2), only screen and (max-width: 480px) and (min-device-pixel-ratio: 1.5) {
+  /* line 165, ../sass/_portfolio.scss */
+  .banner {
+    background: #2c2c2c url(../img/banner/banner-small@2x.jpg) repeat-x bottom;
+    background-size: 300px;
+  }
+}
+/* -----------------------------------------
   Footer
 ----------------------------------------- */
-/* line 120, ../sass/_portfolio.scss */
+/* line 176, ../sass/_portfolio.scss */
 footer {
   width: 100%;
-  background: black;
+  background: #2c2c2c url(../img/footer/footer.jpg) repeat-x bottom;
   color: #b8b6b3;
   height: 100px;
   font-style: italic;
 }
 
-/* line 121, ../sass/_portfolio.scss */
+/* line 177, ../sass/_portfolio.scss */
 footer p {
   font-size: 0.92857143em;
 }
 
-/* line 123, ../sass/_portfolio.scss */
-footer .row > .columns {
-  padding: 0 20px;
-}
-
 @media only screen and (max-width: 767px) {
-  /* line 127, ../sass/_portfolio.scss */
+  /* line 183, ../sass/_portfolio.scss */
   footer p {
     text-align: center;
   }
 }
 @media only screen and (max-width: 480px) {
-  /* line 131, ../sass/_portfolio.scss */
+  /* line 187, ../sass/_portfolio.scss */
   footer .row > .columns {
     padding: 0 10px;
+  }
+}
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
+  /* line 194, ../sass/_portfolio.scss */
+  footer {
+    background: #2c2c2c url(../img/footer/footer@2x.jpg) repeat-x bottom;
+    background-size: 300px 100px;
   }
 }
 /* -----------------------------------------
   Pages
 ----------------------------------------- */
-/* line 140, ../sass/_portfolio.scss */
+/* line 203, ../sass/_portfolio.scss */
 .page {
   background: url(../img/tex/paper.jpg) repeat;
   position: relative;
@@ -5260,7 +5368,7 @@ footer .row > .columns {
   box-shadow: 0px 0px 3px 1px rgba(0, 1, 1, 0.15);
 }
 
-/* line 145, ../sass/_portfolio.scss */
+/* line 208, ../sass/_portfolio.scss */
 .page-inner {
   margin: 20px;
   position: relative;
@@ -5269,7 +5377,7 @@ footer .row > .columns {
   padding: 16px;
 }
 
-/* line 151, ../sass/_portfolio.scss */
+/* line 214, ../sass/_portfolio.scss */
 .page-inner:before {
   content: "";
   position: absolute;
@@ -5282,7 +5390,7 @@ footer .row > .columns {
 }
 
 @media only screen and (max-width: 480px) {
-  /* line 163, ../sass/_portfolio.scss */
+  /* line 226, ../sass/_portfolio.scss */
   .page-inner {
     margin: 16px;
     padding: 12px;
@@ -5291,14 +5399,14 @@ footer .row > .columns {
 /* -----------------------------------------
   Forms
 ----------------------------------------- */
-/* line 173, ../sass/_portfolio.scss */
+/* line 236, ../sass/_portfolio.scss */
 .contactform h3 {
   font-family: 'bistro-script-web';
   font-size: 4em;
   text-align: center;
 }
 
-/* line 176, ../sass/_portfolio.scss */
+/* line 239, ../sass/_portfolio.scss */
 .contactform h3 span {
   font-family: "skolar", "Georgia", "Times New Roman", serif;
   display: block;

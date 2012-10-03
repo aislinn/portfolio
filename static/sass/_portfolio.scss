@@ -1,6 +1,12 @@
+$default-text-shadow-color: rgba(black, 0.3);
+$default-text-shadow-blur: 3px;
+$default-text-shadow-v-offset: 1px;
+
+
 @import "foundation/common/ratios";
 @import "settings";
 @import "compass/css3";
+ 
 
 
 /* -------------------------------------------------- 
@@ -26,10 +32,10 @@ body {background:url(../img/tex/cream.jpg) repeat; font-size:1em; line-height:1.
 
 p {font-size:1em;}
 
-h1 {font-size:2.57142857em; } /*36*/
+h1 {font-size:2.57142857em; @include single-text-shadow; } /*36*/
 h2 {font-size:2.14285714em; } /*30*/
 h3 {font-size:1.71428571em; } /*24*/
-h4 {font-size:1.5em; } /*21*/
+h4 {font-size:1.5em; font-weight:500; } /*21*/
 h5 {font-size:1.28571429em; } /*18*/
 h6 {font-size:1em; }
 
@@ -40,17 +46,14 @@ h6 {font-size:1em; }
   Header
 ----------------------------------------- */
 
-.top-bar { width:100%; background:black; color: $grey; height:80px; margin-bottom: 0; }
+.top-bar { width:100%; background:#262626 url(../img/header/header.jpg) bottom repeat-x; color: $grey; height:80px; margin-bottom: 0; }
 
-.top-bar .row > .columns { padding: 0 20px; }
+//.top-bar .row > .columns { padding: 0 20px; }
 
-.top-bar h4 { color:$secondaryColor; margin-top: 1em; }
+.top-bar h4 { color:$secondaryColor; margin-top: 1em; font-weight:300; }
 .top-bar h4 span { 
 	color: $grey; display: block; line-height:1.69230769;
 	font-size: 0.61904762em; font-family: $sans;  }
-	
-	
-
 
 .top-bar ul > li a:not(.button) { padding: 0; height: auto; }
 
@@ -69,10 +72,25 @@ h6 {font-size:1em; }
 .top-bar ul > li.toggle-topbar a { font-weight:normal; font-size:0.92857143em; font-variant:small-caps; }
 
 
+.main-logo {position:absolute; top:0; left:50%; width:210px; height:105px; margin-left:-105px; background:url(../img/header/logo.png) no-repeat; z-index:3; }
+
+
+
+@media only screen and (max-width: 860px) { 
+	.main-logo {width:200px; height:100px; margin-left:-100px; background-size:cover; }
+	.nav-about, .nav-portfolio {margin-right: 3em;}
+	.top-bar ul > li.nav-journal, 
+	.top-bar ul > li.nav-contact { margin-left: 3em;} }
+
 
 @media only screen and (max-width: 767px) { 
 	.nav-about, .nav-portfolio, .nav-journal, .nav-contact { display: none !important; }
-	.top-bar section { margin-top: 100px; }
+	
+	.main-logo {width:150px; height:75px; margin-left:-75px; background-size:cover; }
+	
+	.top-bar {height:62px;}
+	
+	.top-bar section { margin-top: 82px; }
 	
 	.top-bar ul li.toggle-topbar {background:url(../img/header/ribbon.png) no-repeat 0 -28px; width:50px; right:15px; height:50px; }
 	.top-bar ul li.toggle-topbar:hover {background:url(../img/header/ribbon.png) no-repeat 0 -28px;  }
@@ -82,10 +100,14 @@ h6 {font-size:1em; }
 	.top-bar.expanded ul li.toggle-topbar {background:url(../img/header/ribbon.png) no-repeat; background-position:0 -13px; height:65px; }
 	.top-bar.expanded ul li.toggle-topbar a {width:50px; top: 0; right:0px; border:none; text-align:center; top:auto; bottom:74px;}
 	
-	}
+	
+	.top-bar ul.left h4 {text-align:center; margin-top:0; margin-bottom:1em; }
+	
+	.top-bar section > ul li a:not(.button) {padding-left:0px ! important;} }
 
 
 @media only screen and (max-width: 480px) { 
+
 	.top-bar .row > .columns { padding: 0 10px; }
 	.top-bar ul li.toggle-topbar { right:5px; } }
 	
@@ -100,15 +122,49 @@ only screen and (-moz-min-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min-device-pixel-ratio: 1.5) {
   
+  .top-bar { background:#262626 url(../img/header/header@2x.jpg) bottom repeat-x; background-size:300px 400px; } 
+  
   .top-bar ul li.toggle-topbar { background:url(../img/header/ribbon@2x.png) no-repeat 0 -28px; background-size:100%; }
   .top-bar ul li.toggle-topbar:hover {background:url(../img/header/ribbon@2x.png) no-repeat 0 -28px; background-size:100%;   }
   
-  .top-bar.expanded ul li.toggle-topbar {background:url(../img/header/ribbon@2x.png) no-repeat; background-position:0 -13px;  background-size:100%; }
-  
-}	
+  .top-bar.expanded ul li.toggle-topbar {background:url(../img/header/ribbon@2x.png) no-repeat; background-position:0 -13px;  background-size:100%; } }	
+	
+
+
+
+/* -----------------------------------------
+  Banner
+----------------------------------------- */
+
+.banner {background:#2c2c2c url(../img/banner/banner.jpg) repeat-x bottom; width:100%; height:254px; }	
+
+.mobile {display:none;}
+	
+	
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) { 
+
+	.banner {
+		background:#2c2c2c url(../img/banner/banner@2x.jpg) repeat-x bottom; width:100%; height:254px;
+		background-size:300px 400px; } }
+				
+	
+@media only screen and (max-width: 480px) {
+	.banner {height:62px ; background:#2c2c2c url(../img/banner/banner-small.jpg) repeat-x bottom;}
+	.mobile {display:block; color:$secondaryColor; text-align:center;} }	
 	
 	
 	
+@media only screen and (max-width: 480px) and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (max-width: 480px) and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (max-width: 480px) and (-o-min-device-pixel-ratio: 3/2),
+only screen and (max-width: 480px) and (min-device-pixel-ratio: 1.5) { 
+
+	.banner {
+		background:#2c2c2c url(../img/banner/banner-small@2x.jpg) repeat-x bottom;
+		background-size:300px; } }			
 	
 	
 
@@ -117,10 +173,10 @@ only screen and (min-device-pixel-ratio: 1.5) {
   Footer
 ----------------------------------------- */
 
-footer { width:100%; background:black; color: $grey; height:100px; font-style:italic; }
+footer { width:100%; background:#2c2c2c url(../img/footer/footer.jpg) repeat-x bottom; color: $grey; height:100px; font-style:italic; }
 footer p { font-size: 0.92857143em; }
 
-footer .row > .columns { padding: 0 20px; }
+//footer .row > .columns { padding: 0 20px; }
 
 
  @media only screen and (max-width: 767px) {
@@ -129,6 +185,13 @@ footer .row > .columns { padding: 0 20px; }
 
  @media only screen and (max-width: 480px) { 
  	footer .row > .columns { padding: 0 10px; }}
+ 	
+ 	
+ @media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+ only screen and (-moz-min-device-pixel-ratio: 1.5),
+ only screen and (-o-min-device-pixel-ratio: 3/2),
+ only screen and (min-device-pixel-ratio: 1.5) { 
+ 	footer {  background:#2c2c2c url(../img/footer/footer@2x.jpg) repeat-x bottom; background-size:300px 100px; }  }	
 
 
 
