@@ -2,11 +2,12 @@ require 'zurb-foundation'
 # Require any additional compass plugins here.
 
 # Set this to the root of your project when deployed:
-http_path = "/"
-css_dir = "static/css"
+http_path = "../../wordpress"
+css_dir = "../../wordpress/wp-content/themes/aislinnkelly/static/css"
 sass_dir = "static/sass"
-images_dir = "static/img"
-javascripts_dir = "static/js"
+images_dir = "../../wordpress/wp-content/themes/aislinnkelly/static/img"
+javascripts_dir = "./../wordpress/wp-content/themes/aislinnkelly/static/js"
+project_type = :stand_alone
 
 # You can select your preferred output style here (can be overridden via the command line):
 # output_style = :expanded or :nested or :compact or :compressed

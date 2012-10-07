@@ -1,0 +1,141 @@
+/* -----------------------------------------
+   Blog
+----------------------------------------- */ 	
+
+.single .nine.columns,
+.blog .nine.columns { margin-top: -24px;}
+
+
+.prev-posts { float: right; margin-bottom: 2em; margin-top: -1em; }
+.next-posts { float: left; margin-bottom: 2em; margin-top: -1em; }
+
+div.avatar { display: table-cell; float: left; margin-right: 20px; margin-top:-4px; }
+div.avatar img {  @include border-radius(50%); }
+
+.commentlist { margin-bottom: 0; }
+.comment-detail { display: table-cell; }
+.comment-detail h4 { margin-top: 2px;  }
+.comment-detail h4 span { margin-left: 4px;}
+.comment-detail h4 span a { 
+	font-size: 0.6667em; color: $txtColor; 
+    font-style: italic; }
+.comment-detail p {  }
+
+h4#comments, #respond h4 { text-align: center; }
+ 
+    
+li.comment { border-bottom: 1px solid $pagestroke; padding: 2.5em 20px 1.25em 20px; } 
+li.comment:last-child { border-bottom:none; }	
+
+li.trackback,
+li.pingback { display:none; }
+
+
+.bypostauthor {
+	background:rgb(243, 233, 221);
+	background:rgba(243, 233, 221, 0.5);}
+	
+	
+#respond .page-inner  {padding:16px 0; }	
+	
+	
+.slip-inner {word-wrap:break-word;}	
+.slip-inner.comments { padding: 0; }	
+.slip-inner.blogpost { padding-top: 2em; padding-bottom: 3em;}	
+.slip-inner.blogpost h2 { margin-bottom: 0.1em;} 
+.slip > p {margin-left:20px; }
+	
+	
+.entry p {font-size: 1.14285714em;  }
+
+.entry div {max-width:100%;}
+
+.postmetadata {border-top:1px dashed $pagestroke2; padding-top:1em;}
+
+
+.wp-caption-text {font-style:italic; font-size:1em;}
+
+
+//.blogpost h1,
+//.blogpost h2,
+//.blogpost h3,
+//.blogpost h4,
+//.blogpost h5,
+//.blogpost h6,
+//#commentform p,
+//.postmetadata {padding:0 20px;}
+
+
+
+.meta { margin-bottom: 1.71428571em; }
+	  
+	
+	
+@media only screen and (max-width: 480px) {
+	li.comment { padding: 2.5em 12px;}
+	div.avatar { margin-right: 12px;}
+	div.avatar img { width: 48px;}
+	.comment-detail h4 span  { display: block; margin-left: 0px;}  }	
+	
+	
+	
+#sidebar {padding-left:2.5em;}	
+#sidebar h4 { margin-bottom:1.14285714em; }
+#sidebar h6 { cursor:pointer; margin:0; line-height:1.5;  }	
+
+#sidebar ul {
+	list-style-type:none; border-top:1px dashed  $pagestroke2; 
+	margin:0.5em 0 0 0; padding:0.5em 0;  }
+		
+	
+	
+	
+/* -----------------------------------------
+  Forms
+----------------------------------------- */
+
+form label {text-transform:uppercase;  color: $txtColor;}	
+form input[type="text"] {
+	border:none; background:none; border-bottom:1px dashed  $pagestroke2;
+	@include box-shadow(none); height:20px; font-size:1em; color: $txtColor; 
+	padding:0 4px; margin-top:6px; }
+	
+
+
+label.inline { 
+	display:table-cell; height:30px; 
+	line-height: 1.5; vertical-align:bottom;}
+
+
+.slip-inner.slip-form {padding-left:0; padding-right:0;}
+.slip-inner.slip-form p {padding:0 20px;}
+
+.slip-inner .row {padding:0 20px; }
+
+
+
+
+textarea {
+	border:none; border-top:1px solid $pagestroke; 
+	border-bottom :1px solid $pagestroke; background:none; margin-top:28px; resize:none;
+	@include box-shadow(none); padding:20px; color: $txtColor; }
+	
+textarea:focus {
+	background:rgb(243, 233, 221);
+	background:rgba(243, 233, 221, 0.3);
+	border-color:$pagestroke; } 	
+	
+	
+::-webkit-input-placeholder { color: $txtColor; }
+
+:-moz-placeholder {  color: $txtColor;  }	
+
+
+
+@media only screen and (max-width: 480px) {
+	.slip-inner .row {padding:0 12px; }
+	textarea {padding:12px; } }
+
+
+	
+	
