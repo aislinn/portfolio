@@ -22,11 +22,33 @@
 	
 	
 .portfolio-thumb {
-	float:left; margin:0; padding:0; border:1px solid $headerFontColor; display:table; width:100%;
+	float:left; margin:0; padding:0; border:1px solid $imagestroke; display:table; width:100%;
+	img {display:block;}}	
 	
-	img {display:block;}
-	
-	}	
+.portfolio-thumb img {
+	width: 100%;}	
 	
 .portfolio-thumb:hover .portfolio-view { display:block;}
+	
+		
+	
+.portfolio-items [class*="column"] + [class*="column"]:last-child { float:left;}
+.portfolio-items .four {margin-top:15px;}
+
+
+@media only screen and (max-width: 950px) {
+
+	.portfolio-items .column, .portfolio-items .columns {padding:0 7.5px;}}
+	
+	
+@media only screen and (max-width: 767px){
+	
+	.row .portfolio-items .mobile-two {width:33% ! important;} }
+	
+	
+@media only screen and (max-width: 480px){
+	
+	.row .portfolio-items .mobile-two {width:50% ! important;} }
+
+
 	

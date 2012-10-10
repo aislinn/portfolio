@@ -1,0 +1,87 @@
+/* -----------------------------------------
+  Banner
+----------------------------------------- */
+
+.banner {
+	background:#2c2c2c url(../img/banner/banner.jpg) repeat-x bottom; width:100%; text-align: center; }	
+	
+	
+.banner.contentbanner { padding-top: 55px; padding-bottom: 55px;}	
+
+.banner.homebanner { padding-top: 60px; padding-bottom: 25px;}
+
+.banner h1 {
+	color:$secondaryColor; text-transform:uppercase; letter-spacing:2px; display:block;}
+
+.banner h6 {
+	color: $bannertxt; text-transform:uppercase; letter-spacing:4px; font-weight:600; font-size:1.07142857em;
+	@include text-shadow(rgba(0, 1, 1, 0.4) 2px 2px 3px);}
+	
+	
+.contentbanner h6 { margin-bottom: 8px;}
+.contentbanner h1 {	margin-top: 0;}
+
+.contentbanner h6 .dots {
+	height: 16px; width: 50px; display: inline-block; margin: 0 1em; vertical-align: middle;
+	background: url(../img/banner/dots@2x.png) left -2px; background-size: 50px  16px;
+}
+
+	
+.established {
+	background: url(../img/banner/est.png) no-repeat center;
+	height: 34px; font-size:1.07142857em;
+	font-family: "droid-serif";
+	text-transform: uppercase; color: #a39d96; line-height: 33px;
+	@include text-shadow(rgba(0, 1, 1, 0.4) 2px 2px 3px);}	
+
+
+.mobile {display:none;}
+
+
+.curve { background: url(../img/banner/curve.png) no-repeat center; height: 60px; text-indent: -9999px; margin-top: -10px; }
+
+	
+	
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) { 
+
+	.banner {
+		background:#2c2c2c url(../img/banner/banner@2x.jpg) repeat-x bottom; width:100%; height:254px;
+		background-size:300px 400px; }
+		
+	.established {
+		background: url(../img/banner/est@2x.png) no-repeat center;
+		background-size: 310px 34px;}}
+				
+	
+//@media only screen and (max-width: 480px) {
+//	.banner {height:62px ; background:#2c2c2c url(../img/banner/banner-small.jpg) repeat-x bottom;}
+//	.mobile {display:block; color:$secondaryColor; text-align:center;} }	
+//	
+//	
+	
+@media only screen and (max-width: 480px) and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (max-width: 480px) and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (max-width: 480px) and (-o-min-device-pixel-ratio: 3/2),
+only screen and (max-width: 480px) and (min-device-pixel-ratio: 1.5) { 
+
+	.banner {
+		background:#2c2c2c url(../img/banner/banner-small@2x.jpg) repeat-x bottom;
+		background-size:300px 400px; } }		
+		
+		
+		
+@media only screen and (max-width: 920px){
+	.banner.homebanner { padding-top: 50px; padding-bottom: 15px;	} }		
+			
+		
+@media only screen and (max-width: 560px){
+	.curve { background-size: 100%;} }	
+	
+	
+@-moz-document url-prefix() {
+    .banner h1, .banner h6 {font-weight: 300;
+	} }		
+	

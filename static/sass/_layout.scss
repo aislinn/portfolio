@@ -37,12 +37,32 @@ h2 {font-size:2.14285714em; } /*30*/
 h3 {font-size:1.71428571em; } /*24*/
 h4 {font-size:1.5em; font-weight:500; } /*21*/
 h5 {font-size:1.28571429em; } /*18*/
-h6 {font-size:1.14285714em; } /*16*/
+h6 {font-size:1.14285714em;  } /*16*/
+
+
+h1, h2, h3, h4, h5, h6 {font-weight:500;}
 
 a:hover { text-decoration: underline; }
 
 
 ul, ol {margin-bottom:1.5em;}
+
+section[role="main"] { margin-top: 2.5em; }
+
+
+@media only screen and (max-width: 950px) { 
+
+.column, .columns {padding:0 20px;} }
+
+
+@media only screen and (max-width: 480px) { 
+
+.column, .columns {padding:0 10px;}
+section[role="main"] { margin-top: 1em; } }
+
+
+
+
 
 
 
@@ -54,7 +74,7 @@ ul, ol {margin-bottom:1.5em;}
 
 //.top-bar .row > .columns { padding: 0 20px; }
 
-.top-bar h4 { color:$secondaryColor; margin-top: 18px; font-weight:300; }
+.top-bar h4 { color:$secondaryColor; margin-top: 18px; }
 .top-bar h4 span { 
 	color: $grey; display: block; line-height:1.69230769;
 	font-size: 0.61904762em; font-family: $sans;  }
@@ -65,9 +85,7 @@ ul, ol {margin-bottom:1.5em;}
 
 .nav-bar { margin-bottom: 0;}
 
-//#mainNav { margin-top: -1em; }
-//#mainNav li { list-style-type: none; display: inline-block;  }
-//
+
 
 #primary_nav  { margin-top: -1em; }
 #primary_nav  li { list-style-type: none; display: inline-block;  }
@@ -81,7 +99,8 @@ ul, ol {margin-bottom:1.5em;}
 .top-bar ul > li.nav-contact { float: right; text-align:right; margin-left: 4em; }
 
 
-.top-bar ul > li.toggle-topbar a { font-weight:normal; font-size:0.92857143em; font-variant:small-caps; }
+.top-bar ul > li.toggle-topbar a { font-weight:normal; text-transform:uppercase; }
+.top-bar ul > li.toggle-topbar a h4 {font-size:0.78571429em; margin:0;}
 
 
 .main-logo {position:absolute; top:0; left:50%; width:210px; height:105px; margin-left:-105px; background:url(../img/header/logo.png) no-repeat; z-index:3; }
@@ -90,9 +109,9 @@ ul, ol {margin-bottom:1.5em;}
 
 @media only screen and (max-width: 860px) { 
 	.main-logo {width:200px; height:100px; margin-left:-100px; background-size:cover; }
-	.nav-about, .nav-portfolio {margin-right: 3em;}
+	.nav-about, .nav-portfolio {margin-right: 2.5em;}
 	.top-bar ul > li.nav-journal, 
-	.top-bar ul > li.nav-contact { margin-left: 3em;} }
+	.top-bar ul > li.nav-contact { margin-left: 2.5em;} }
 
 
 @media only screen and (max-width: 767px) { 
@@ -107,10 +126,10 @@ ul, ol {margin-bottom:1.5em;}
 	.top-bar ul li.toggle-topbar {background:url(../img/header/ribbon.png) no-repeat 0 -28px; width:50px; right:15px; height:50px; }
 	.top-bar ul li.toggle-topbar:hover {background:url(../img/header/ribbon.png) no-repeat 0 -28px;  }
 	
-	.top-bar ul li.toggle-topbar a {width:50px; right:0px; border:none; text-align:center; top:auto; bottom:-10px; }
+	.top-bar ul li.toggle-topbar a {width:50px; right:0px; border:none; text-align:center; top:auto; bottom:24px; }
 	
 	.top-bar.expanded ul li.toggle-topbar {background:url(../img/header/ribbon.png) no-repeat; background-position:0 -13px; height:65px; }
-	.top-bar.expanded ul li.toggle-topbar a {width:50px; top: 0; right:0px; border:none; text-align:center; top:auto; bottom:74px;}
+	.top-bar.expanded ul li.toggle-topbar a {width:50px; top: 0; right:0px; border:none; text-align:center; top:auto; bottom:41px;}
 	
 	
 	.top-bar ul.left h4 {text-align:center; margin-top:0; margin-bottom:1em; }
@@ -144,40 +163,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 
 
-/* -----------------------------------------
-  Banner
------------------------------------------ */
 
-.banner {background:#2c2c2c url(../img/banner/banner.jpg) repeat-x bottom; width:100%; height:254px; }	
-
-.mobile {display:none;}
-	
-	
-@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
-only screen and (-moz-min-device-pixel-ratio: 1.5),
-only screen and (-o-min-device-pixel-ratio: 3/2),
-only screen and (min-device-pixel-ratio: 1.5) { 
-
-	.banner {
-		background:#2c2c2c url(../img/banner/banner@2x.jpg) repeat-x bottom; width:100%; height:254px;
-		background-size:300px 400px; } }
-				
-	
-@media only screen and (max-width: 480px) {
-	.banner {height:62px ; background:#2c2c2c url(../img/banner/banner-small.jpg) repeat-x bottom;}
-	.mobile {display:block; color:$secondaryColor; text-align:center;} }	
-	
-	
-	
-@media only screen and (max-width: 480px) and (-Webkit-min-device-pixel-ratio: 1.5),
-only screen and (max-width: 480px) and (-moz-min-device-pixel-ratio: 1.5),
-only screen and (max-width: 480px) and (-o-min-device-pixel-ratio: 3/2),
-only screen and (max-width: 480px) and (min-device-pixel-ratio: 1.5) { 
-
-	.banner {
-		background:#2c2c2c url(../img/banner/banner-small@2x.jpg) repeat-x bottom;
-		background-size:300px; } }			
-	
 	
 
 
@@ -187,7 +173,7 @@ only screen and (max-width: 480px) and (min-device-pixel-ratio: 1.5) {
 
 
 html, body { height: 100%; }
-footer, .push { height: 100px; } 	
+footer, .push { height: 100px; margin-top:2em; } 	
 .wrapper { min-height: 100%; height: auto !important; height: 100%; margin: 0 auto -100px; }
  	
 
@@ -269,7 +255,7 @@ footer ul.link-list li.footer-facebook:hover {  background-position: -161px -42p
 
 
 .slip { 
-	background:url(../img/tex/paper.jpg) repeat; position:relative; float:left;  margin-bottom:30px;  width: 100%;
+	background:url(../img/tex/paper.jpg) repeat; position:relative; float:left;  margin-bottom:20px;  width: 100%;
 	@include box-shadow(0px 0px 3px 1px rgba(0, 1, 1, 0.15));}
 
 
@@ -296,24 +282,19 @@ footer ul.link-list li.footer-facebook:hover {  background-position: -161px -42p
 
 
 
-/* -----------------------------------------
-  Forms
------------------------------------------ */
-
-
-.contactform h3 {
- 	font-family: 'bistro-script-web'; font-size: 4em; text-align: center; } 	
- 	
-.contactform h3 span { font-family: $bodyFontFamily ; display: block; font-size: 0.28571429em; text-transform: uppercase; text-indent:5px;  } 	
- 	  
  	  
   
+ 
+ /* -----------------------------------------
+   Sidepanel
+ ----------------------------------------- */ 
  	  
  	  
+ .sidepanel > * {margin-left:30px;}	  
  	  
  	  
- 	  
- 	  
+ @media only screen and (max-width: 950px) {
+ 	.sidepanel > * {margin-left:0px;} } 	  
  	  
  	  
  	  
