@@ -11,7 +11,8 @@
 .banner.homebanner { padding-top: 60px; padding-bottom: 25px;}
 
 .banner h1 {
-	color:$secondaryColor; text-transform:uppercase; letter-spacing:2px; display:block;}
+	color:$secondaryColor; text-transform:uppercase; letter-spacing:2px; display:block;
+	@include text-shadow(rgba(0, 1, 1, 0.4) 2px 2px 3px);}
 
 .banner h6 {
 	color: $bannertxt; text-transform:uppercase; letter-spacing:4px; font-weight:600; font-size:1.07142857em;
@@ -31,7 +32,7 @@
 	background: url(../img/banner/est.png) no-repeat center;
 	height: 34px; font-size:1.07142857em;
 	font-family: "droid-serif";
-	text-transform: uppercase; color: #a39d96; line-height: 33px;
+	text-transform: uppercase; color: #a39d96; line-height: 34px;
 	@include text-shadow(rgba(0, 1, 1, 0.4) 2px 2px 3px);}	
 
 

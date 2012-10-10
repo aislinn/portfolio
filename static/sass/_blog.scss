@@ -97,10 +97,10 @@ li.pingback { display:none; }
 	.comment-detail h4 span  { display: block; margin-left: 0px;}  }	
 	
 	
-	
+/*	
 @media only screen and (min-width: 480px) {	
 	.single .nine.columns,
-	.blog .nine.columns { margin-top: -60px;} }	
+	.blog .nine.columns { margin-top: -60px;} }	*/
 	
 	
 #sidebar {padding-left:30px;}	
@@ -112,9 +112,24 @@ li.pingback { display:none; }
 	margin:0.5em 0 0 0; padding:0.5em 0;  }
 	
 	
+.widgethead:hover {
+	background: url(../img/journal/arrow.png) no-repeat right center;}	
+	
+	
 @media only screen and (max-width: 787px) {
 	
 #sidebar {padding-left:7.5px;}		}	
+
+
+
+
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+	.widgethead:hover {
+		background: url(../img/journal/arrow@2x.png) no-repeat right center;
+		background-size: 9px 6px;}	}
 		
 	
 	
